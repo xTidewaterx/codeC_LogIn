@@ -1,0 +1,340 @@
+*
+
+{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #cc5050, #13196f);
+}
+
+section .color 
+{
+
+    position: absolute;
+    filter: blur(150px);
+}
+
+
+section .color :nth-child(1)
+{
+
+ top: -350px;
+ width: 600px;
+ height: 600px;
+ background:rgb(37, 39, 163);
+}
+
+
+section .color:nth-child(2)
+{
+    bottom: -150px;
+    right: 0;
+    width: 40vw;
+    height: 40vh;
+    background: rgb(119, 44, 138);
+}
+
+section .color:nth-child(3)
+{
+    bottom: 50px;
+    right: 100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(179, 63, 173, 0);
+}
+.box {
+
+    position: relative;
+}
+
+.container {
+    position: relative;
+  width: 400px;
+    min-height: 400px;
+    background: rgba(198, 202, 193, 0.1);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 45px 145px rgb(241, 151, 151);  /*equal white box-shadow can give the feel of light leaking out from all edges due to it's transatory bleed*/
+    border: 1px solid rgba(170, 52, 125, 0.17);
+    border-right: 1px solid rgb(198, 202, 193, 0.2);
+    border-bottom: 1px solid rgb(198, 202, 193, 0.2);
+}
+
+.form {
+    position: relative
+    wid
+    100%;
+    height: 100%;
+    padding: 40px;
+
+}
+
+.form h2 {
+
+    position: relative;
+    color: #fff;
+    font-size: 24px;
+ font-weight: 600;
+ letter-spacing: 1px;
+ margin-bottom: 40px;
+
+  
+}
+
+.form .inputBox {
+
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form .inputBox {
+
+    width: 100%;
+ margin-top: 20px;
+}
+
+.form .inputBox input {
+
+    width: 100%;
+    background: rgb(198, 202, 193, 0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1.4px solid rgb(143, 50, 89);
+
+    box-shadow: 0 45px 145px rgb(241, 151, 151);  /*equal white box-shadow can give the feel of light leaking out from all edges due to it's transatory bleed*/
+    border-right: 1px solid rgb(198, 202, 193, 0.2);
+    border-bottom: 1px solid rgb(198, 202, 193, 0.2);
+}
+
+.form .inputBox input::placeholder
+{
+    color: #fff;
+}
+
+.form .inputBox input[type="submit"]
+{
+    background: #fff;
+    color: rgba(198, 202, 193, 0.1);
+    max-width: 100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.forget /*these are the names of the button divs*/{
+    margin-top: 5px;
+    color: #fff;
+
+}
+
+.forget a {
+
+    color: #fff;
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+.box .square {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 45px 145px rgb(241, 151, 151);  /*equal white box-shadow can give the feel of light leaking out from all edges due to it's transatory bleed*/
+    border: 1px solid rgba(170, 52, 125, 0.17);
+    border-right: 1px solid rgb(198, 202, 193, 0.2);
+    border-bottom: 1px solid rgb(198, 202, 193, 0.2);
+    border-radius: 12px;
+    animation: animate 150s linear infinite;
+    animation: animate 10s cubic-bezier(0.1, 0.6, 0.6, 4) infinite; /*now the optimizastion of the real world shines through, we keep them high in the middle and slow them down towards the edge*/
+    animation-delay: calc(-1s * var(--i));
+
+}
+ @keyframes animate 
+ {
+     0%, 100%
+  {
+      transform: translate(-40px);
+  }
+  50%
+  {
+      transform: translate(40px);
+  }
+}
+
+.box .square:nth-child(1)
+{
+    top: -70px;
+    right: -60px;
+    width: 100px;
+    height: 130px;
+}
+
+
+
+.box .square:nth-child(2)
+{
+    top: 150px;
+    left: -100px;
+    width: 120px;
+    height: 120px;
+    z-index: 2;
+}
+
+
+.box .square:nth-child(3)
+{
+  bottom: 13px;
+  right: -40px;
+ 
+    width: 80px;
+    height: 80px;
+    z-index: 2;
+}
+
+
+.box .square:nth-child(4)
+{
+  bottom: -80px;
+ left: 100px;
+ 
+    width: 50px;
+    height: 50px;
+
+}
+
+
+.box .square:nth-child(5)
+{
+top: -140px;
+ left: 140px;
+ 
+    width: 80px;
+    height: 80px;
+
+}
+
+
+.box .square:nth-child(6)
+{
+    top: -70px;
+    left: 250px;
+    
+       width: 30px;
+       height: 30px;
+       background: rgba(70, 14, 51, 0.301);
+       border-radius: 6px;
+     
+       position:absolute;
+       overflow: hidden;
+
+}
+
+
+
+.box .square:nth-child(7)
+{
+   top: -50px;
+ left: 70px;
+ 
+    width: 20px;
+    height: 20px;
+    background: rgba(70, 14, 51, 0.301);
+    border-radius: 6px;
+
+}
+
+
+.box .square:nth-child(8)
+{
+   top: -30px;
+ right: 10px;
+ 
+    width: 20px;
+    height: 20px;
+    background: rgba(70, 14, 51, 0.301);
+    border-radius: 6px;
+    margin-right: 77px;
+
+}
+
+
+
+
+.box .square:nth-child(9)
+{
+   top: -3px;
+ right: 70px;
+ 
+    width: 30px;
+    height: 50px;
+    background: rgba(70, 14, 51, 0.301);
+    border-radius: 6px;
+    z-index: 1;
+
+}
+
+
+
+.box .square:nth-child(10)
+{
+   
+ right: -40px;
+    top: -150px;
+    width: 15px;
+    height: 15px;
+    background: rgba(70, 14, 51, 0.301);
+    border-radius: 6px;
+    z-index: 1;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#logIn {
+ 
+    color: magenta;
+}
+
+
+h2 {
+
+    color: #fff;
+}
+
+p {
+    color: #fff;
+}
